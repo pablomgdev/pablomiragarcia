@@ -1,4 +1,8 @@
 ---
+import 'normalize.css';
+import '../styles/global.css';
+
+import NavigationBar from "../components/NavigationBar.astro";
 ---
 
 <html lang="en">
@@ -7,9 +11,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>pablomgdev's blog</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<header>
+			<NavigationBar class="centered-container" />
+		</header>
+		<main class="centered-container">
+			<h1>Astro</h1>
+		</main>
 	</body>
 </html>
+
+<style>
+	body{
+		background-color: var(--dark-background-color);
+	}
+	.centered-container{
+		width: 80%;
+		margin: 0 auto;
+	}
+	@media screen and (max-width: 1300px){
+        .centered-container{
+            width: 90%;
+        }
+    }
+</style>

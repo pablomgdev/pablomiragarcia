@@ -1,0 +1,14 @@
+:root{
+    --dark-background-color: #20252C;
+    --dark-color-hover: #3c4654;
+    --dark-text-color: #e5e5e5;
+}
+
+body{
+    font-family: 'Zilla Slab', serif;
+    margin: 0;
+}
+
+h1, h2, h3, p {
+    color: var(--dark-text-color);
+}

@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon';
+
+interface Properties {
+    class: string
+}
+const { class: className }: Properties = Astro.props as Properties;
+---
+
+<div class="top-bar-background">
+    <div class:list={[ "top-bar", className ]}>
+        <a id="logo" href="#">
+            <Icon name="logo" alt="pablomgdev's logo" />
+        </a>
+        <nav>
+            <ol>
+                <li>Blog</li>
+                <li>About</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<style>
+    .top-bar-background{
+        background-color: transparent;
+    }
+    .top-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5rem;
+        padding: 0.5rem 0;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    #logo{
+        width: 10%;
+        max-width: 4rem;
+        min-width: 2.8rem;
+    }
+    nav ol{
+        display: flex;
+        gap: 2rem;
+        color: var(--dark-text-color);
+        list-style: none;
+        padding: 0;
+    }
+</style>
