@@ -1,6 +1,8 @@
 # pablomgdev-blog
 My personal blog.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06c9d5b5-74cd-410c-ac62-0830260fc441/deploy-status)](https://app.netlify.com/sites/pablomiragarcia-blog/deploys)
+
 ## 🚀 Project Structure
 
 ```bash
