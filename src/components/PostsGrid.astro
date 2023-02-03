@@ -1,0 +1,30 @@
+---
+import Post from "./Post.astro";
+---
+<div class="posts">
+    <Post imageSrc="/public/favicon.svg"
+          title="Arquitectura hexagonal y DDD con .NET Core"
+          date={new Date()} />
+    <Post imageSrc="/public/favicon.svg"
+          title="Cómo funciona Docker"
+          date={new Date()} />
+    <Post imageSrc="/public/favicon.svg"
+          title="Otro ejemplo"
+          date={new Date()} />
+    <Post imageSrc="/public/favicon.svg"
+          title="Un ejemplo cualquiera"
+          date={new Date()} />
+    <Post imageSrc="/public/favicon.svg"
+          title="Otro ejemplo más"
+          date={new Date()} />
+</div>
+
+<style>
+    .posts{
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+            width: 90%;
+            margin: 0 auto;
+	}
+</style>

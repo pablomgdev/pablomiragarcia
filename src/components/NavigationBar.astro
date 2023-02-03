@@ -10,7 +10,7 @@ const { class: className }: Properties = Astro.props as Properties;
 <div class="top-bar-background">
     <div class:list={[ "top-bar", className ]}>
         <a id="logo" href="#">
-            <Icon name="logo" alt="pablomgdev's logo" />
+            <Icon name="logo" alt="Logo de Pablo Mira García" />
         </a>
         <nav>
             <ol>
@@ -32,12 +32,12 @@ const { class: className }: Properties = Astro.props as Properties;
         height: 5rem;
         padding: 0.5rem 0;
         max-width: 95%;
-        margin: 0 auto;
+        margin-bottom: 1rem!important;
     }
     #logo{
         width: 10%;
         max-width: 4rem;
-        min-width: 2.8rem;
+        min-width: 3rem;
     }
     nav ol{
         display: flex;

@@ -5,10 +5,14 @@
 }
 
 body{
-    font-family: 'Zilla Slab', serif;
+    font-family: 'Roboto', serif;
     margin: 0;
 }
 
 h1, h2, h3, p {
     color: var(--dark-text-color);
+}
+
+.clickable {
+    cursor: pointer;
 }

@@ -2,26 +2,22 @@
 import 'normalize.css';
 import '../styles/global.css';
 
+import Head from '../components/Head.astro';
 import NavigationBar from "../components/NavigationBar.astro";
+import PostsGrid from '../components/PostsGrid.astro';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>pablomgdev's blog</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-	</head>
+	<Head tabTitle="Pablo Mira García"></Head>
 	<body>
 		<header>
 			<NavigationBar class="centered-container" />
 		</header>
 		<main class="centered-container">
-			<h1>Astro</h1>
+			<section class="latest-posts">
+				<h1>Últimas publicaciones</h1>
+				<PostsGrid></PostsGrid>
+			</section>
 		</main>
 	</body>
 </html>
@@ -33,10 +29,15 @@ import NavigationBar from "../components/NavigationBar.astro";
 	.centered-container{
 		width: 80%;
 		margin: 0 auto;
+		margin-bottom: 3rem;
 	}
 	@media screen and (max-width: 1300px){
         .centered-container{
             width: 90%;
         }
     }
+	.latest-posts h1{
+		text-align: center;
+		margin-bottom: 2rem;
+	}
 </style>
