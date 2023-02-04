@@ -7,16 +7,22 @@ My personal blog.
 
 ```bash
 /
-├── README.md
 ├── astro.config.mjs
 ├── package.json
 ├── pnpm-lock.yaml
 ├── public
 │   └── favicon.svg
 ├── src
+│   ├── assets
 │   ├── components
-│   │   └── NavigationBar.astro
+│   │   ├── Head.astro
+│   │   ├── NavigationBar.astro
+│   │   ├── Post.astro
+│   │   └── PostsGrid.astro
 │   ├── env.d.ts
+│   ├── icons
+│   │   └── logo.svg
+│   ├── layouts
 │   ├── pages
 │   │   └── index.astro
 │   └── styles
