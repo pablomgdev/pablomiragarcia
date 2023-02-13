@@ -11,9 +11,9 @@ import PostsGrid from '../components/PostsGrid.astro';
 	<Head></Head>
 	<body>
 		<header>
-			<NavigationBar class="centered-container" />
+			<NavigationBar />
 		</header>
-		<main class="centered-container">
+		<main class="container">
 			<section class="latest-posts">
 				<h1>Últimas publicaciones</h1>
 				<PostsGrid></PostsGrid>
@@ -26,16 +26,10 @@ import PostsGrid from '../components/PostsGrid.astro';
 	body{
 		background-color: var(--dark-background-color);
 	}
-	.centered-container{
-		width: 80%;
+	.container{
+		width: var(--container-width);
 		margin: 0 auto;
-		margin-bottom: 3rem;
 	}
-	@media screen and (max-width: 1300px){
-        .centered-container{
-            width: 90%;
-        }
-    }
 	.latest-posts h1{
 		text-align: center;
 		margin-bottom: 2rem;

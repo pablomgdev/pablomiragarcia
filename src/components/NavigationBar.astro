@@ -1,14 +1,9 @@
 ---
 import { Icon } from 'astro-icon';
-
-interface Properties {
-    class: string
-}
-const { class: className }: Properties = Astro.props as Properties;
 ---
 
-<div class="top-bar-background">
-    <div class:list={[ "top-bar", className ]}>
+<div class="top-bar-background container">
+    <div class="top-bar">
         <a id="logo" href="#">
             <Icon name="logo" alt="Logo de Pablo Mira García" />
         </a>
@@ -24,6 +19,11 @@ const { class: className }: Properties = Astro.props as Properties;
 <style>
     .top-bar-background{
         background-color: transparent;
+    }
+    .container{
+        width: var(--container-width);
+        margin: 0 auto;
+        margin-bottom: 3rem;
     }
     .top-bar{
         display: flex;
