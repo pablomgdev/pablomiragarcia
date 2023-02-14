@@ -23,6 +23,7 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
         flex-direction: column;
         padding: 1.5rem;
         border-radius: 5px;
+        align-items: center;
     }
     .container:hover{
         background-color: var(--dark-color-hover);
@@ -46,5 +47,9 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
     }
     .date {
         color: var(--dark-text-color);
+    }
+    .post-image-container,
+    .post-details-container{
+        max-width: 24em;
     }
 </style>
