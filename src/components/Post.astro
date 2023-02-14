@@ -11,7 +11,7 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
     <div class="post-image-container">
         <img src={imageSrc} alt="Post image">
     </div>
-    <div>
+    <div class="post-details-container">
         <h2>{title ?? 'Sin título'}</h2>
         <p class="date">{date?.toLocaleDateString('es-ES', { timeZone: 'UTC' }) ?? 'Sin fecha de publicación'}</p>
     </div>
@@ -38,7 +38,14 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
         margin: 0 auto;
         border-radius: 2px;
     }
+    .post-details-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
     .date {
+        margin-top: 0;
         color: var(--dark-text-color);
     }
 </style>
