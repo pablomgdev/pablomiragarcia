@@ -8,9 +8,11 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
 ---
 
 <div class="container clickable">
-    <img src={imageSrc} alt="Post image">
+    <div class="post-image-container">
+        <img src={imageSrc} alt="Post image">
+    </div>
     <div>
-        <h2 class="title">{title ?? 'Sin título'}</h2>
+        <h2>{title ?? 'Sin título'}</h2>
         <p class="date">{date?.toLocaleDateString('es-ES', { timeZone: 'UTC' }) ?? 'Sin fecha de publicación'}</p>
     </div>
 </div>
@@ -19,26 +21,22 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
     .container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
-        width: 100%;
         padding: 1.5rem;
         border-radius: 5px;
     }
     .container:hover{
         background-color: var(--dark-color-hover);
     }
-    .container div{
-        height: 6rem;
+    .post-image-container{
+        width: 100%;
+        height: 12em;
     }
     img {
         width: 100%;
-        height: 50%;
+        height: 100%;
         object-fit: cover;
         margin: 0 auto;
         border-radius: 2px;
-    }
-    .title{
     }
     .date {
         color: var(--dark-text-color);
