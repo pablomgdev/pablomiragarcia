@@ -9,7 +9,9 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
 
 <div class="container clickable">
     <div class="post-image-container">
-        <img src={imageSrc} alt="Post image">
+        <div class="post-image">
+            <img src={imageSrc} alt="Post image">
+        </div>
     </div>
     <div class="post-details-container">
         <h2>{title ?? 'Sin título'}</h2>
@@ -28,8 +30,8 @@ const { imageSrc, title, date }: Properties = Astro.props as Properties;
     .container:hover{
         background-color: var(--dark-color-hover);
     }
-    .post-image-container{
-        height: 12em;
+    .post-image{
+        height: 12rem;
     }
     img {
         width: 100%;
