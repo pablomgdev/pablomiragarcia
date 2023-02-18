@@ -1,0 +1,30 @@
+---
+import 'normalize.css';
+import '../styles/global.css';
+
+import Head from '../components/Head.astro';
+import NavigationBar from "../components/NavigationBar.astro";
+---
+
+<html lang="en">
+    <Head></Head>
+    <body>
+        <header>
+            <NavigationBar />
+        </header>
+        <main class="container">
+            <slot />
+        </main>
+    </body>
+</html>
+
+<style>
+    body{
+        background-color: var(--dark-background-color);
+    }
+    .container{
+        width: var(--container-width);
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+</style>
