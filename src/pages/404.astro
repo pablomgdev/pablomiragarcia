@@ -1,0 +1,14 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+---
+
+<MainLayout pageTab={{ title: "Página no encontrada (404)", isAuthorNameUsedInTabTitle: false }}>
+    <h1 class="title">Página no encontrada 🔎</h1>
+    <p>Parece que la página a la que intenta acceder no existe 😥.</p>
+</MainLayout>
+
+<style>
+    .title{
+        margin: 0;
+    }
+</style>

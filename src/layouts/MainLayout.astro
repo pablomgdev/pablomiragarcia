@@ -1,13 +1,29 @@
 ---
 import 'normalize.css';
 import '../styles/global.css';
-
 import Head from '../components/Head.astro';
-import NavigationBar from "../components/NavigationBar.astro";
+import NavigationBar from "../components/NavigationBar/Main.astro";
+
+interface PageTab { title?: string, isAuthorNameUsedInTabTitle?: boolean }
+interface Properties { pageTab: PageTab, }
+
+const { pageTab }: Properties = Astro.props as Properties;
+// TODO: see if unit tests can be added here for testing this functionality (create tabTitle)
+// TODO: refactor code when unit tests are added
+const authorName = "Pablo Mira García";
+let tabTitle: string;
+if (pageTab?.title) {
+    tabTitle = pageTab.title;
+    if (pageTab?.isAuthorNameUsedInTabTitle ?? true) {
+        tabTitle = authorName + " - " + tabTitle;
+    }
+} else {
+    tabTitle = authorName;
+}
 ---
 
 <html lang="en">
-    <Head></Head>
+    <Head tabTitle={tabTitle}></Head>
     <body>
         <header>
             <NavigationBar />

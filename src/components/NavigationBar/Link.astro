@@ -1,0 +1,38 @@
+---
+interface Properties{
+    text: string,
+    href?: string,
+}
+const properties: Properties = Astro.props as Properties;
+// Use the properties got
+const linkText = properties.text.toLowerCase();
+const linkHref = properties.href ?? linkText;
+// To active the link relative to the current route
+const pathName = new URL(Astro.request.url).pathname;
+const currentPath = pathName.slice(1).toLowerCase();
+---
+
+<a class={currentPath === linkHref ? "active" : ""} href={`/${linkHref}`}><li>{linkText}</li></a>
+
+<style>
+    a{
+        color: var(--dark-text-color);
+        text-decoration: none;
+        padding: 1rem 1.6rem;
+        opacity: .6;
+    }
+    a.active{    /* TODO: use this class for the active link */
+        color: var(--dark-text-color);
+    }
+    a:hover{
+        background-color: #00000050;
+        border-radius: 5px;
+    }
+    a.active,
+    a:hover{
+        opacity: 1;
+    }
+    li{
+        text-transform: capitalize;
+    }
+</style>

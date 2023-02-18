@@ -1,18 +1,14 @@
 ---
 import { Icon } from 'astro-icon';
+import LinksSection from './LinksSection.astro';
 ---
 
-<div class="top-bar-background container">
-    <div class="top-bar">
+<div class="top-bar-background">
+    <div class="top-bar container">
         <a id="logo" href="/">
             <Icon name="logo" alt="Logo de Pablo Mira García" />
         </a>
-        <nav>
-            <ol>
-                <li>Blog</li>
-                <li>About</li>
-            </ol>
-        </nav>
+        <LinksSection />
     </div>
 </div>
 
@@ -28,20 +24,13 @@ import { Icon } from 'astro-icon';
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 5rem;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem!important;
+        height: 10rem;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
     }
     #logo{
         width: 10%;
-        max-width: 4rem;
-        min-width: 3rem;
-    }
-    nav ol{
-        display: flex;
-        gap: 2rem;
-        color: var(--dark-text-color);
-        list-style: none;
-        padding: 0;
+        max-width: 7rem;
+        min-width: 5rem;
     }
 </style>
