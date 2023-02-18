@@ -1,4 +1,5 @@
 # pablomgdev-blog
+
 My personal page. [Follow the link](https://pablomiragarcia-blog.netlify.app/).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/06c9d5b5-74cd-410c-ac62-0830260fc441/deploy-status)](https://app.netlify.com/sites/pablomiragarcia-blog/deploys)
@@ -6,27 +7,28 @@ My personal page. [Follow the link](https://pablomiragarcia-blog.netlify.app/).
 ## 🚀 Project Structure
 
 ```bash
-/
+.
 ├── astro.config.mjs
 ├── package.json
 ├── pnpm-lock.yaml
 ├── public
-│   └── favicon.svg
+│   └── favicon.svg
 ├── src
-│   ├── assets
-│   ├── components
-│   │   ├── Head.astro
-│   │   ├── NavigationBar.astro
-│   │   ├── Post.astro
-│   │   └── PostsGrid.astro
-│   ├── env.d.ts
-│   ├── icons
-│   │   └── logo.svg
-│   ├── layouts
-│   ├── pages
-│   │   └── index.astro
-│   └── styles
-│       └── global.css
+│   ├── components
+│   │   ├── Head.astro
+│   │   ├── NavigationBar.astro
+│   │   ├── Post.astro
+│   │   └── PostsGrid.astro
+│   ├── env.d.ts
+│   ├── icons
+│   │   └── logo.svg
+│   ├── layouts
+│   │   └── MainLayout.astro
+│   ├── pages
+│   │   └── blog
+│   │       └── index.astro
+│   └── styles
+│       └── global.css
 └── tsconfig.json
 ```
 
