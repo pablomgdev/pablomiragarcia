@@ -1,13 +1,13 @@
 # pablomgdev-blog
 
-My personal page. [Follow the link](https://pablomiragarcia-blog.netlify.app/).
+My personal page. [Follow the link](https://pablomiragarcia.netlify.app/).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/06c9d5b5-74cd-410c-ac62-0830260fc441/deploy-status)](https://app.netlify.com/sites/pablomiragarcia-blog/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06c9d5b5-74cd-410c-ac62-0830260fc441/deploy-status)](https://app.netlify.com/sites/pablomiragarcia/deploys)
 
 ## 🚀 Project Structure
 
 ```bash
-.
+/
 ├── astro.config.mjs
 ├── package.json
 ├── pnpm-lock.yaml
@@ -16,7 +16,10 @@ My personal page. [Follow the link](https://pablomiragarcia-blog.netlify.app/).
 ├── src
 │   ├── components
 │   │   ├── Head.astro
-│   │   ├── NavigationBar.astro
+│   │   ├── NavigationBar
+│   │   │   ├── Link.astro
+│   │   │   ├── LinksSection.astro
+│   │   │   └── Main.astro
 │   │   ├── Post.astro
 │   │   └── PostsGrid.astro
 │   ├── env.d.ts
@@ -25,6 +28,7 @@ My personal page. [Follow the link](https://pablomiragarcia-blog.netlify.app/).
 │   ├── layouts
 │   │   └── MainLayout.astro
 │   ├── pages
+│   │   ├── 404.astro
 │   │   └── blog
 │   │       └── index.astro
 │   └── styles
