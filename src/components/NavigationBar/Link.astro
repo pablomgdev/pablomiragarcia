@@ -9,8 +9,7 @@ const linkText = properties.text.toLowerCase();
 const linkHref = properties.href ?? linkText;
 // To active the link relative to the current route
 const pathName = new URL(Astro.request.url).pathname;
-// Note: I think, in new Astro versions, this is not done:
-//  The replace is added for avoiding path names with a "/" at the end of the string
+// The replace is added for avoiding path names with a "/" at the end of the string
 const currentPath = pathName.slice(1).replace(/\/$/,"").toLowerCase();
 ---
 
