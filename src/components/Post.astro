@@ -2,24 +2,31 @@
 interface Properties {
     imageSrc: string,
     title: string,
-    date: Date
+    date: Date,
+    href: string,
 }
-const { imageSrc, title, date }: Properties = Astro.props as Properties;
+const { imageSrc, title, date, href }: Properties = Astro.props as Properties;
 ---
 
-<div class="container clickable">
-    <div class="post-image-container">
-        <div class="post-image">
-            <img src={imageSrc} alt="Post image">
+<a href={href} title={title}>
+    <div class="container">
+        <div class="post-image-container">
+            <div class="post-image">
+                <img src={imageSrc} alt="Post image">
+            </div>
+        </div>
+        <div class="post-details-container">
+            <h2>{title ?? 'Sin título'}</h2>
+            <p class="date">{date?.toLocaleDateString('es-ES', { timeZone: 'UTC' }) ?? 'Sin fecha de publicación'}</p>
         </div>
     </div>
-    <div class="post-details-container">
-        <h2>{title ?? 'Sin título'}</h2>
-        <p class="date">{date?.toLocaleDateString('es-ES', { timeZone: 'UTC' }) ?? 'Sin fecha de publicación'}</p>
-    </div>
-</div>
+</a>
 
 <style>
+    a{
+        font-size: inherit;
+        text-decoration: none;
+    }
     .container {
         display: flex;
         flex-direction: column;
