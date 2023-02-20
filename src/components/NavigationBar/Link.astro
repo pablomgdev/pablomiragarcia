@@ -9,7 +9,8 @@ const linkText = properties.text.toLowerCase();
 const linkHref = properties.href ?? linkText;
 // To active the link relative to the current route
 const pathName = new URL(Astro.request.url).pathname;
-// The replace is added for avoiding path names with a "/" at the end of the string
+// Note: I think, in new Astro versions, this is not done:
+//  The replace is added for avoiding path names with a "/" at the end of the string
 const currentPath = pathName.slice(1).replace(/\/$/,"").toLowerCase();
 ---
 
@@ -21,13 +22,13 @@ const currentPath = pathName.slice(1).replace(/\/$/,"").toLowerCase();
         text-decoration: none;
         padding: 1rem 1.6rem;
         opacity: .6;
+        border-radius: 5px;
     }
-    a.active{    /* TODO: use this class for the active link */
+    a.active{
         color: var(--dark-text-color);
     }
     a:hover{
         background-color: #00000050;
-        border-radius: 5px;
     }
     a.active,
     a:hover{
