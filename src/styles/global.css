@@ -4,6 +4,7 @@
   --dark-color-hover: #3c4654;
   --dark-text-color: #d7d7d7;
   --container-width: 80%;
+  --container-max-width: 100rem;
 }
 @media screen and (max-width: 1300px) {
   :root {
