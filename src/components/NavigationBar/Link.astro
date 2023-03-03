@@ -13,7 +13,7 @@ const pathName = new URL(Astro.request.url).pathname;
 const currentPath = pathName.slice(1).replace(/\/$/,"").toLowerCase();
 ---
 
-<a class={currentPath === linkHref ? "active" : ""} href={`/${linkHref}`}><li>{linkText}</li></a>
+<a class={currentPath.split('/').includes(linkHref) ? "active" : ""} href={`/${linkHref}`}><li>{linkText}</li></a>
 
 <style>
     a{
